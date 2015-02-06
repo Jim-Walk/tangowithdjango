@@ -43,12 +43,11 @@ def populate():
 
     my_cat = add_cat(name="2096502w", views=4, likes=10)
 
-    add_page(cat=my_cat, title="Jims Github",
-             url="00https://github.com/andrewpsuedonym")
+    add_page(cat=my_cat, title="Jim's Github",
+             url="https://github.com/andrewpsuedonym")
 
-    add_page(cat=my_cat, title="Jims PythonAnywhere",
+    add_page(cat=my_cat, title="Jim's PythonAnywhere",
              url='https://www.pythonanywhere.com/user/2096502w/')
-
 
     # Print out what we have added to the user.
     for c in Category.objects.all():
