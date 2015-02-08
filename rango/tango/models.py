@@ -1,6 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django import forms
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
@@ -14,6 +15,7 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 class Page(models.Model):
     category = models.ForeignKey(Category)
@@ -29,3 +31,13 @@ class Page(models.Model):
         return self.title
 
 
+class UserProfile(models.Model):
+
+    # Links profile to the user model interface
+    user = models.OneToOneField(User)
+
+    website = models.URLField(blank=True)
+    picture = models.ImageField(upload_to='profile_images', blank=True)
+
+    def __unicode__(self):
+        return self.user.username

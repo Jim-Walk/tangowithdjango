@@ -54,6 +54,8 @@ ROOT_URLCONF = 'rango.urls'
 
 WSGI_APPLICATION = 'rango.wsgi.application'
 
+LOGIN_URL = '/rango/login/'
+
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
