@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 
 {% load staticfiles %}<!--New line -->
 <html>
@@ -7,13 +8,13 @@
 		<title>Rango</title>
 	</head>
 
-	<body>
+{% block body_block %}
 		<h1>Rango says...</h1>
 		This is the about page<strong>{{ boldmessage }}</strong><br />
-		<a href="/rango/">Index</a><br />
+
 		<br/>Jim Walker
 		<br/>2096502w
 		<br/><img src = "{% static "images/me.jpg" %}" alt = "phot of me" /><!-- New line -->
-	<body>
+{% endblock %}
 
 </html>
