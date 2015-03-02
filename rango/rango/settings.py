@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tango',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,3 +94,13 @@ STATICFILES_DIRS = (
 
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#Session stuff
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+REGISTRATION_OPEN = True        # If True, users can register
+ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True  # If True, the user will be automatically logged in.
+LOGIN_REDIRECT_URL = '/rango/'  # The page you want users to arrive at after they successful log in
+LOGIN_URL = '/accounts/login/'  # Page users are directed to if they are must be logged in to access attempted page
