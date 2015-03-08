@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from tango.models import Category
-from tango.models import Page
+from tango.models import Category, Page
 from tango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 from datetime import datetime
 
@@ -37,7 +36,6 @@ def index(request):
         request.session['last_visit'] = str(datetime.now())
         request.session['visits'] = visits
     context_dict['visits'] = visits
-
 
     response = render(request,'rango/index.html', context_dict)
 
