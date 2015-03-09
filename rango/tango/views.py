@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from tango.models import Category, Page
 from tango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 from datetime import datetime
-
+from tango.bing_search import run_queary
 
 def index(request):
 
@@ -66,6 +66,20 @@ def category(request, category_name_slug):
         pass
 
     return render(request, 'rango/category.html', context_dict)
+
+
+def search(request):
+
+    result_list = []
+
+    if request.method == 'POST':
+        query = request.POST['query'].strip()
+
+        if query:
+            result_list = run_queary(query)
+
+    return render(request, 'rango/search.html', {'result_list': result_list})
+
 
 @login_required
 def add_category(request):
