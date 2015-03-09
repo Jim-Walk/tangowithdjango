@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c9984f9-83f9-4344-a379-0e46d4902782" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/db.sqlite3" afterPath="$PROJECT_DIR$/rango/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/tango/bing_search.py" afterPath="$PROJECT_DIR$/rango/tango/bing_search.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/templates/rango/category.html" afterPath="$PROJECT_DIR$/rango/templates/rango/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/templates/rango/register.html" afterPath="$PROJECT_DIR$/rango/templates/rango/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/templates/registration/registration_form.html" afterPath="$PROJECT_DIR$/rango/templates/registration/registration_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/tango/urls.py" afterPath="$PROJECT_DIR$/rango/tango/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/tango/views.py" afterPath="$PROJECT_DIR$/rango/tango/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rango/templates/base.html" afterPath="$PROJECT_DIR$/rango/templates/base.html" />
     </list>
     <ignored path="tangowithdjango.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bing_search.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bing_search.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rango/tango/bing_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.072115384" vertical-offset="0" max-vertical-offset="1155">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
               <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -68,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rango/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.652174" vertical-offset="180" max-vertical-offset="1260">
-              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.2512479" vertical-offset="59" max-vertical-offset="1350">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -156,11 +150,11 @@
         <option value="$PROJECT_DIR$/rango/templates/rango/cats.html" />
         <option value="$PROJECT_DIR$/rango/bing_search.py" />
         <option value="$PROJECT_DIR$/rango/templates/rango/search.html" />
-        <option value="$PROJECT_DIR$/rango/templates/base.html" />
         <option value="$PROJECT_DIR$/rango/templates/rango/category.html" />
         <option value="$PROJECT_DIR$/rango/tango/urls.py" />
         <option value="$PROJECT_DIR$/rango/tango/views.py" />
         <option value="$PROJECT_DIR$/rango/tango/bing_search.py" />
+        <option value="$PROJECT_DIR$/rango/templates/base.html" />
       </list>
     </option>
   </component>
@@ -909,14 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rango/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.652174" vertical-offset="180" max-vertical-offset="1260">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rango/tango/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
@@ -963,11 +949,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rango/tango/bing_search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.072115384" vertical-offset="0" max-vertical-offset="1155">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rango/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2512479" vertical-offset="59" max-vertical-offset="1350">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
