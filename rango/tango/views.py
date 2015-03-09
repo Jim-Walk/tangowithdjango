@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -80,6 +80,21 @@ def search(request):
 
     return render(request, 'rango/search.html', {'result_list': result_list})
 
+
+def track_url(request):
+    url = '/rango/'
+    if request.method == 'GET':
+        if 'pageid'in request.GET:
+            page_id = request.GET['pageid']
+            try:
+                getList = Page.objects.filter(id=page_id)
+                page = getList[0]
+                page.views += 1
+                page.save()
+                url = page.url
+            except:
+                pass
+    return redirect(url)
 
 @login_required
 def add_category(request):
