@@ -62,11 +62,11 @@ def run_queary(search_terms):
     # Return the list of results to the calling function.
     return results
 
-def main():
-    search_term = raw_input("Enter search term: ")
-    searchList = run_queary(search_term)
-    for search in searchList:
-        print search["link"], " - ", search["title"]
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     search_term = raw_input("Enter search term: ")
+#     searchList = run_queary(search_term)
+#     for search in searchList:
+#         print search["link"], " - ", search["title"]
+#
+# if __name__ == '__main__':
+#     main()

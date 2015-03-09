@@ -15,14 +15,13 @@
                 	<li><a href="{% url 'goto' %}?pageid={{page.id}}">{{ page.title }}</a></li>
                 	{% endfor %}
 
-                    <div class="row">
                         <br/>
                         <br/>
-
+            </ul>
         <div class="panel panel-primary">
             <br/>
 
-            <form class="form-inline" id="user_form" method="post" action="{% url 'search' %}">
+            <form class="form-inline" id="user_form" method="post" action="{% url 'category' category.slug %}">
                 {% csrf_token %}
                 <!-- Display the search form elements here -->
                 <input class="form-control" type="text" size="50" name="query" value="" id="query" />
@@ -48,7 +47,7 @@
                 {% endif %}
                 </div>
             </div>
-                </ul>
+
         	{% else %}
                 	<strong>No pages currently in category.</strong>
                 {% endif %}
