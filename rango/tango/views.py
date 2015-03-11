@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from tango.models import Category, Page
 from tango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 from datetime import datetime
-from tango.bing_search import run_queary
+from tango.bing_search import run_query
 
 def index(request):
 
@@ -60,7 +60,7 @@ def category(request, category_name_slug):
 
         if query:
             # Run our Bing function to get the results list!
-            result_list = run_queary(query)
+            result_list = run_query(query)
 
             context_dict['result_list'] = result_list
             context_dict['query'] = query
@@ -93,7 +93,7 @@ def search(request):
         query = request.POST['query'].strip()
 
         if query:
-            result_list = run_queary(query)
+            result_list = run_query(query)
 
     return render(request, 'rango/search.html', {'result_list': result_list})
 
@@ -173,9 +173,6 @@ def register(request):
         if user_form.is_valid() and profile_form.is_valid():
 
             user = user_form.save()
-            user.set_password(user.set_password)
-            user.save()
-
             profile = profile_form.save(commit=False)
             profile.user = user
 

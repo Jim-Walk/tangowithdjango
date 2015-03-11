@@ -4,7 +4,7 @@ import urllib, urllib2
 BING_API_KEY = ""
 
 
-def run_queary(search_terms):
+def run_query(search_terms):
 
     #First part of the url
 
