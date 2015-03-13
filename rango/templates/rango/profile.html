@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html>
 {% extends 'base.html' %}
 
 {% load staticfiles %}
 
-{% block title %}{{ Username }}{% endblock %}
+{% block title %}{{ user.username }}{% endblock %}
 
 {% block body_block %}
-     <div class="page-header">{{ UserName }}</div>
+     <div class="page-header">
+         <h1>{{ UserName }} Change password here</h1>
+     </div>
+     <form method="post" action=".">
+         {% csrf_token %}
+         {{ form.as_p }}
 
-    	
-                 
+         <input type="submit" value="Submit" />
+     </form>
 {% endblock %}
-</html>

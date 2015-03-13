@@ -37,7 +37,7 @@ def index(request):
         request.session['visits'] = visits
     context_dict['visits'] = visits
 
-    response = render(request,'rango/index.html', context_dict)
+    response = render(request, 'rango/index.html', context_dict)
 
     return response
 
@@ -55,6 +55,7 @@ def category(request, category_name_slug):
     context_dict = {}
     context_dict['result_list'] = None
     context_dict['query'] = None
+
     if request.method == 'POST':
         query = request.POST['query'].strip()
 
@@ -146,8 +147,9 @@ def add_page(request, category_name_slug):
                 page.category = cat
                 page.views = 0
                 page.save()
-
-                return category(request, category_name_slug)
+                redirectReturn = '/rango/category/'
+                redirectReturn += category_name_slug
+                return HttpResponseRedirect(redirectReturn)
         else:
             print form.errors
     else:
@@ -160,9 +162,6 @@ def add_page(request, category_name_slug):
 
 def register(request):
 
-    if request.session.test_cookie_worked():
-        print ">>>> TEST COOKIE WORKED!"
-        request.session.delete_test_cookie()
     registered = False
 
     if request.method == "POST":
@@ -191,7 +190,7 @@ def register(request):
         profile_form = UserProfileForm()
 
     return render(request, 'rango/register.html',
-                  {'user_form': user_form, 'profile_form': profile_form, 'registered':registered})
+                  {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
 
 
 def user_login(request):
